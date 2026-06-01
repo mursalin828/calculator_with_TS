@@ -3,36 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TS Smart Calculator</title>
+    <title>Simple Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="calculator">
-    <input type="text" id="display" disabled placeholder="0">
-    <div class="buttons">
-        <button class="btn clear" onclick="clearDisplay()">C</button>
-            <button class="btn operator" onclick="setOperator('/')">/</button>
-            <button class="btn operator" onclick="setOperator('*')">×</button>
-            <button class="btn operator" onclick="setOperator('-')">-</button>
+        <input type="text" id="display" readonly>
 
-            <button class="btn" onclick="appendNumber('7')">7</button>
-            <button class="btn" onclick="appendNumber('8')">8</button>
-            <button class="btn" onclick="appendNumber('9')">9</button>
-            <button class="btn operator" onclick="setOperator('+')">+</button>
+        <div class="buttons">
+            <button class="btn clear" onclick="clearDisplay()">C</button>
+            <button class="btn" onclick="appendValue('/')">/</button>
+            <button class="btn" onclick="appendValue('*')">*</button>
+            <button class="btn" onclick="appendValue('-')">-</button>
 
-            <button class="btn" onclick="appendNumber('4')">4</button>
-            <button class="btn" onclick="appendNumber('5')">5</button>
-            <button class="btn" onclick="appendNumber('6')">6</button>
-             <button class="btn equal" onclick="calculate()">=</button>
-             
-            <button class="btn" onclick="appendNumber('1')">1</button>
-            <button class="btn" onclick="appendNumber('2')">2</button>
-            <button class="btn" onclick="appendNumber('3')">3</button>
-           
-            <button class="btn zero" onclick="appendNumber('0')">0</button>
-            <button class="btn" onclick="appendNumber('.')">.</button>
+            <button class="btn" onclick="appendValue('7')">7</button>
+            <button class="btn" onclick="appendValue('8')">8</button>
+            <button class="btn" onclick="appendValue('9')">9</button>
+             <button class="btn plus" onclick="appendValue('+')">+</button>
+
+            <button class="btn" onclick="appendValue('4')">4</button>
+            <button class="btn" onclick="appendValue('5')">5</button>
+            <button class="btn" onclick="appendValue('6')">6</button>
+            <button class="btn" onclick="appendValue('1')">1</button>
+
+            <button class="btn" onclick="appendValue('2')">2</button>
+            <button class="btn" onclick="appendValue('3')">3</button>
+            <button class="btn equal" onclick="calculatorResult()">=</button>
+            <button class="btn zero" onclick="appendValue('0')">0</button>
+            <button class="btn" onclick="appendValue('.')">.</button>
+            
         </div>
     </div>
-    <script src="calculator.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
